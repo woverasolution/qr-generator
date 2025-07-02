@@ -5,6 +5,7 @@ export interface QrCodeData {
   productLogo: string;
   abbreviation: string;
   description: string;
+  qrIcon: string;
 }
 
 export const productList: QrCodeData[] = [
@@ -15,6 +16,7 @@ export const productList: QrCodeData[] = [
     productLogo: "/logos/abal.svg",
     abbreviation: "AB",
     description: "Member pass QR",
+    qrIcon: "/logos/abal-icon.svg",
   },
   // Add other products here
 ];
