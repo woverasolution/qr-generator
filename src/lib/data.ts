@@ -6,6 +6,7 @@ export interface QrCodeData {
   abbreviation: string;
   description: string;
   qrIcon: string;
+  
 }
 
 export const productList: QrCodeData[] = [

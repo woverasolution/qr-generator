@@ -12,8 +12,10 @@ const QrCodePage = () => {
   const params = useParams();
   const searchParams = useSearchParams();
 
+  console.log(params);
+
   const abbreviation = params.abbreviation as string;
-  const data = searchParams.get("data");
+  const data = searchParams.get("d");
 
   const qrCodeRef = useRef<HTMLDivElement>(null);
 
@@ -56,12 +58,11 @@ const QrCodePage = () => {
       <div className="flex min-h-screen flex-col items-center justify-center bg-red-100 p-5">
         <h1 className="text-2xl font-bold text-red-700">Error: Data missing</h1>
         <p className="text-red-600">
-          Please provide data in the URL, e.g., /{abbreviation}?data=your-data
+          Please provide data in the URL, e.g., /{abbreviation}?d=your-data
         </p>
       </div>
     );
   }
-
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-5">
