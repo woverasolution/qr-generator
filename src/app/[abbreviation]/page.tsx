@@ -28,7 +28,10 @@ const QrCodePage = () => {
       return;
     }
 
-    toPng(qrCodeRef.current, { cacheBust: true })
+    toPng(qrCodeRef.current, {
+      cacheBust: true,
+      backgroundColor: "#ffffff",
+    })
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.download = `${productInfo?.company}-${productInfo?.product}-qr.png`;
