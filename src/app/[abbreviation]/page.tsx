@@ -7,6 +7,7 @@ import { productList } from "@/lib/data";
 import QrCodeDisplay from "@/components/QrCodeDisplay";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import HomeButton from "./home-button";
 
 const QrCodePage = () => {
   const params = useParams();
@@ -52,6 +53,7 @@ const QrCodePage = () => {
         <p className="text-red-600">
           The product abbreviation &quot;{abbreviation}&quot; does not exist.
         </p>
+        <HomeButton />
       </div>
     );
   }
@@ -63,6 +65,7 @@ const QrCodePage = () => {
         <p className="text-red-600">
           Please provide data in the URL, e.g., /{abbreviation}?d=your-data
         </p>
+        <HomeButton />
       </div>
     );
   }
@@ -79,6 +82,7 @@ const QrCodePage = () => {
         <Download className="mr-2 h-4 w-4" />
         Download QR Code
       </Button>
+      <HomeButton />
     </div>
   );
 };
