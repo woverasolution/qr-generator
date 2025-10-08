@@ -74,7 +74,7 @@ export default function Home() {
               id="memberCode"
               value={memberCode}
               onChange={(e) => setMemberCode(e.target.value)}
-              placeholder="e.g., 345"
+              placeholder="e.g., ABAL-345"
               required
             />
           </div>
